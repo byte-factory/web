@@ -1,0 +1,80 @@
+body{
+  background-color: #eeeeee;
+}
+
+.el-container{
+  color: #333;
+  background-color: #ffffff;
+  max-width: 1280px;
+  max-height: 1024px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* aside */
+.el-aside {
+  /* width: 300px; */
+  text-align: center;
+  margin: 10px;
+}
+
+.el-aside .el-image{
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  border-radius: 50px;
+}
+
+.el-aside .el-menu{
+  border: 0;
+  padding: 0 10px;
+}
+
+.el-aside .el-menu-item{
+  border-radius: 50px;
+  margin-top: 15px;
+  font-size: 1em;
+  text-align: center;
+  border: 1px solid #eee;
+  line-height: 3em;
+}
+
+
+/* main */
+.el-main {
+  text-align: center;
+  padding: 10px;
+  border-left: 1px solid #eeeeee;
+}
+
+
+/* lp 自建样式 */
+
+div.lp-menu{
+  margin: 50px 0;
+  padding: 20px;
+}
+
+div.lp-login{
+  /* margin-top: 50px */
+  position: relative;
+  top: 390px;
+}
+
+div.lp-links{
+  font-size: 0.9em;
+  margin-top: 10px;
+  position: relative;
+  top: 400px;
+} 
+
+div.lp-main-content{
+  padding: 30px;
+  border-right: 1px solid #eee
+}
+
+div.lp-main-content .el-tabs{
+ margin-top: 30px
+}
