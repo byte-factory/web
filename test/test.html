@@ -13,16 +13,34 @@
           <p>Try Element</p>
         </el-dialog>
       </div>
+      <!-- router example -->
+      <div id="app2">
+        <h1>Hello App!</h1>
+        <p>
+          <!-- 使用 router-link 组件来导航. -->
+          <!-- 通过传入 `to` 属性指定链接. -->
+          <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+          <router-link to="/foo">Go to Foo</router-link>
+          <router-link to="/bar">Go to Bar</router-link>
+        </p>
+        <!-- 路由出口 -->
+        <!-- 路由匹配到的组件将渲染在这里 -->
+        <router-view></router-view>
+      </div>
 </body>
 <!-- import Vue before Element -->
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import Vue router -->
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 <!-- import JavaScript -->
 <script src="https://unpkg.com/element-ui@2.13.2/lib/index.js"></script>
-<script>
+<!-- script -->
+<script src="./router.js"></script>
+<script> 
 new Vue({
     el: '#app',
     data: function() {
-    return { visible: false }
+      return { visible: false }
     }
 })
 </script>

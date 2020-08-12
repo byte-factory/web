@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>字节加工厂·首页</title>
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="./node_modules/element-ui/lib/theme-chalk/index.css">
+  <!-- 自建样式 -->
+  <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+  <div id="app">
+    <el-container>
+      <!-- aside -->
+      <el-aside>
+        <el-image src="./images/logo.png"></el-image>
+        <ul class="lp-nav">
+          <li class="lp-nav-item">记支出</li>
+          <li class="lp-nav-item">记时间</li>
+          <li class="lp-nav-item">记草稿</li>
+        </ul>
+        <div class="lp-login">
+          <el-button size="small">登陆账号</el-button>
+        </div>
+        <div class="lp-links">
+          <span>访问官方</span> | <span>意见反馈</span>
+        </div>
+      </el-aside>
+      <!-- main -->
+      <el-main>
+          <div class="main-content">
+            <div class="app-title">
+              记支出 Pay
+            </div>
+            <div class="app-desc">
+              记支出，记录你的每一笔消费，走出理财的第一步。
+            </div>
+            <div class="sum-desc">
+              当月总消费：<b class="pay-main-color">￥3000</b>
+              <span class="pay-main-color float-right"><i class="el-icon-circle-plus"></i> 添加一笔</span>
+            </div>
+            <el-tabs v-model="activeName" @tab-click="handleClick">
+              <el-tab-pane label="首页" name="first">
+                
+              </el-tab-pane>
+              <el-tab-pane label="统计" name="second">
+                
+              </el-tab-pane>
+              <el-tab-pane label="奖励" name="third">
+                
+              </el-tab-pane>
+              <el-tab-pane label="设置" name="fourth">
+                
+              </el-tab-pane>
+              <el-tab-pane>
+                
+              </el-tab-pane>
+            </el-tabs>
+          </div>
+          <div class="main-aside">
+            <el-button>Hello</el-button>
+            Hello
+          </div>
+      </el-main>
+    </el-container>
+  </div>
+</body>
+<!-- import Vue before Element -->
+<script src="./node_modules/vue/dist/vue.js"></script>
+<!-- import Vue router -->
+<script src="./node_modules/vue-router/dist/vue-router.js"></script>
+<!-- import JavaScript -->
+<script src="./node_modules/element-ui/lib/index.js"></script>
+<!-- script -->
+<!-- <script src="./router/index.js"></script> -->
+<script>
+  new Vue({
+    el: '#app',
+    data: function () {
+      return { visible: false }
+    }
+  })
+</script>
+
+</html>
