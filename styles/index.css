@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body{
   background-color: #eeeeee;
 }
@@ -17,7 +16,7 @@ body{
   border: 1px solid #ddd;
   border-radius: 30px;
   max-width: 1280px;
-  height: 800px;
+  height: 1024px;
 }
 
 /* aside */
@@ -30,27 +29,35 @@ body{
 .el-aside .el-image{
   width: 100px;
   height: 100px;
-  margin: 50px 0;
+  margin-top: 50px;
   border-radius: 50px;
 }
 
-.el-aside .lp-nav{
+.el-aside .el-menu{
   border: 0;
   padding: 0 30px;
   margin-bottom: 50px;
 }
 
-.el-aside .lp-nav-item{
+.el-aside .el-menu-item{
   border-radius: 50px;
-  margin-top: 15px;
+  margin-top: 5px;
   font-size: 1em;
   text-align: center;
-  border: 1px solid #eee;
+  /* border: 1px solid #eee; */
   line-height: 3em;
 }
 
+.el-menu-item-group__title{
+  padding: 7px 0;
+}
+
+.el-aside .el-menu-item.is-active{
+  background-color: #ecf5ff;
+}
+
 div.lp-login{
-  margin-top: 250px
+  margin-top: 450px
 }
 
 div.lp-links{
@@ -78,7 +85,7 @@ div.lp-links{
 }
 
 .el-main .main-content .app-title{
-  margin-top: 50px;
+  margin-top: 70px;
   font-size: 1.5em;
   font-weight: bold;
 }
@@ -91,12 +98,7 @@ div.lp-links{
 }
 
 .el-main .main-content .sum-desc{
-  margin-top: 30px;
-}
-
-.el-main .main-content .lp-bold{
-  font-size: 1.2em;
-  font-weight: bold;
+  margin-top: 50px;
 }
 
 .el-main .main-content .el-tabs{
@@ -111,85 +113,4 @@ div.lp-links{
 
 .float-right{
   float: right;
-=======
-body{
-  background-color: #eeeeee;
-}
-
-.el-container{
-  color: #333;
-  background-color: #ffffff;
-  max-width: 1280px;
-  max-height: 1024px;
-  border: 1px solid #ddd;
-  border-radius: 30px;
-  margin: 0 auto;
-  height: 100%;
-}
-
-/* aside */
-.el-aside {
-  /* width: 300px; */
-  text-align: center;
-  margin: 10px;
-}
-
-.el-aside .el-image{
-  width: 100px;
-  height: 100px;
-  margin-top: 50px;
-  border-radius: 50px;
-}
-
-.el-aside .el-menu{
-  border: 0;
-  padding: 0 10px;
-}
-
-.el-aside .el-menu-item{
-  border-radius: 50px;
-  margin-top: 15px;
-  font-size: 1em;
-  text-align: center;
-  border: 1px solid #eee;
-  line-height: 3em;
-}
-
-
-/* main */
-.el-main {
-  text-align: center;
-  padding: 10px;
-  border-left: 1px solid #eeeeee;
-}
-
-
-/* lp 自建样式 */
-
-div.lp-menu{
-  margin: 50px 0;
-  padding: 20px;
-}
-
-div.lp-login{
-  /* margin-top: 50px */
-  position: relative;
-  top: 390px;
-}
-
-div.lp-links{
-  font-size: 0.9em;
-  margin-top: 10px;
-  position: relative;
-  top: 400px;
-} 
-
-div.lp-main-content{
-  padding: 30px;
-  border-right: 1px solid #eee
-}
-
-div.lp-main-content .el-tabs{
- margin-top: 30px
->>>>>>> dd6492baeb7b3b78c3a0dcd4c0ee51c677e3eb78
 }

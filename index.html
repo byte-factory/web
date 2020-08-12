@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -16,11 +15,23 @@
       <!-- aside -->
       <el-aside>
         <el-image src="./images/logo.png"></el-image>
-        <ul class="lp-nav">
-          <li class="lp-nav-item">记支出</li>
-          <li class="lp-nav-item">记时间</li>
-          <li class="lp-nav-item">记草稿</li>
-        </ul>
+        <p style="margin-bottom: 50px;">字节加工厂</p>
+        <el-menu default-active="2" class="el-menu-vertical-demo">
+          <!-- <p style="margin: 5px 0; font-size: 0.8em; color: #999;">记录类</p> -->
+          <el-menu-item index="2">
+            <i class="el-icon-s-finance" style="font-size: 1.2em;"></i>
+            <span slot="title">记支出</span>
+          </el-menu-item>
+          <el-menu-item index="3">
+            <i class="el-icon-document"></i>
+            <span slot="title">记时间</span>
+          </el-menu-item>
+          <el-menu-item index="4">
+            <i class="el-icon-setting"></i>
+            <span slot="title">记草稿</span>
+          </el-menu-item>
+          
+        </el-menu>
         <div class="lp-login">
           <el-button size="small">登陆账号</el-button>
         </div>
@@ -83,92 +94,4 @@
     }
   })
 </script>
-
-=======
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>字节加工厂·首页</title>
-  <!-- 引入样式 -->
-  <link rel="stylesheet" href="./node_modules/element-ui/lib/theme-chalk/index.css">
-  <!-- 自建样式 -->
-  <link rel="stylesheet" href="./styles/index.css">
-</head>
-
-<body>
-  <div id="app">
-    <el-container>
-      <!-- aside -->
-      <el-aside>
-        <el-image src="./images/logo.png"></el-image>
-        <div class="lp-menu">
-          <el-menu default-active="2" class="el-menu-vertical-demo">
-            <el-menu-item index="2">
-              <!-- <i class="el-icon-s-finance" style="font-size: 1.2em;"></i> -->
-              <span slot="title">记支出</span>
-            </el-menu-item>
-            <el-menu-item index="3">
-              <!-- <i class="el-icon-document"></i> -->
-              <span slot="title">记时间</span>
-            </el-menu-item>
-            <el-menu-item index="4">
-              <!-- <i class="el-icon-setting"></i> -->
-              <span slot="title">记草稿</span>
-            </el-menu-item>
-          </el-menu>
-        </div>
-        <div class="lp-login">
-          <el-button size="small">登陆账号</el-button>
-        </div>
-        <div class="lp-links">
-          <span>访问官方</span> | <span>意见反馈</span>
-        </div>
-      </el-aside>
-      <!-- main -->
-      <el-main>
-        <el-row :gutter="20">
-          <el-col :span="14">
-            <div class="lp-main-header">
-              <div class="title">字节加工厂 Pay</div>
-              <div class="description">记支出，记录你的每一笔消费，走出理财的第一步。</div>
-            </div>
-            <div class="lp-main-content">
-              <div class="sumary">当月总支出：3000 元</div>
-              <el-tabs v-model="activeName" @tab-click="handleClick">
-                <el-tab-pane label="首页" name="first">首页</el-tab-pane>
-                <el-tab-pane label="统计" name="second">统计</el-tab-pane>
-                <el-tab-pane label="奖励" name="third">奖励</el-tab-pane>
-                <el-tab-pane label="设置" name="fourth">设置</el-tab-pane>
-              </el-tabs>
-            </div>
-          </el-col>
-          <el-col :span="10">
-            <div class="grid-content bg-purple"></div>
-          </el-col>
-        </el-row>
-
-        
-      </el-main>
-    </el-container>
-  </div>
-</body>
-<!-- import Vue before Element -->
-<script src="./node_modules/vue/dist/vue.js"></script>
-<!-- import Vue router -->
-<script src="./node_modules/vue-router/dist/vue-router.js"></script>
-<!-- import JavaScript -->
-<script src="./node_modules/element-ui/lib/index.js"></script>
-<!-- script -->
-<!-- <script src="./router/index.js"></script> -->
-<script>
-  new Vue({
-    el: '#app',
-    data: function () {
-      return { visible: false }
-    }
-  })
-</script>
-
->>>>>>> dd6492baeb7b3b78c3a0dcd4c0ee51c677e3eb78
 </html>
