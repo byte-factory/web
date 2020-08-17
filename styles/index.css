@@ -15,8 +15,8 @@ body{
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 30px;
-  max-width: 1280px;
-  height: 1024px;
+  max-width: 1440px;
+  /* max-height: 100%; */
 }
 
 /* aside */
@@ -57,12 +57,13 @@ body{
 }
 
 div.lp-login{
-  margin-top: 450px
+  margin-top: 300px
 }
 
 div.lp-links{
   font-size: 0.9em;
   margin-top: 15px;
+  margin-bottom: 50px;
 } 
 
 /* main */
@@ -81,7 +82,7 @@ div.lp-links{
 
 .el-main .main-aside{
   padding: 0 30px;
-  flex: 0 0 40%;
+  flex: 0 0 35%;
 }
 
 .el-main .main-content .app-title{
@@ -113,4 +114,45 @@ div.lp-links{
 
 .float-right{
   float: right;
+}
+
+
+/* form */
+.main-aside .form-title{
+  margin-top: 70px;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.main-aside .el-form{
+  margin-top: 20px;
+}
+
+.main-aside .el-radio-group{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.main-aside .el-radio-group .el-radio{
+  /* margin-top: 10px; */
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.main-aside .el-checkbox-group .el-checkbox{
+  margin: 10px 10px 0 0;
+}
+
+.el-form-item__content{
+  line-height: 1.5em;
+}
+
+.el-checkbox__label{
+  margin-top: 2px;
+}
+
+.el-radio.is-bordered+.el-radio.is-bordered, .el-checkbox.is-bordered+.el-checkbox.is-bordered{
+  margin-left: 0
 }

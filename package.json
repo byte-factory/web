@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "name": "byte-factory-web",
   "version": "1.0.0",
@@ -27,33 +26,3 @@
     "vue-router": "^3.4.1"
   }
 }
-=======
-{
-  "name": "byte-factory-web",
-  "version": "1.0.0",
-  "description": "byte factory web",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/byte-factory/web.git"
-  },
-  "keywords": [
-    "byte-factory",
-    "web"
-  ],
-  "author": "lupeng",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/byte-factory/web/issues"
-  },
-  "homepage": "https://github.com/byte-factory/web#readme",
-  "dependencies": {
-    "element-ui": "^2.13.2",
-    "vue": "^2.6.11",
-    "vue-router": "^3.4.1"
-  }
-}
->>>>>>> dd6492baeb7b3b78c3a0dcd4c0ee51c677e3eb78
