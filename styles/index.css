@@ -156,3 +156,52 @@ div.lp-links{
 .el-radio.is-bordered+.el-radio.is-bordered, .el-checkbox.is-bordered+.el-checkbox.is-bordered{
   margin-left: 0
 }
+
+
+/* list */
+.cost-list{
+  max-height: 550px;
+  padding-right: 30px;
+  overflow-y: scroll;
+}
+
+.cost-list-item{
+  display: flex;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.cost-list-item:first-child{
+  margin-top: 0;
+}
+
+.category-icon{
+  flex: 1;
+  font-size: 2em;
+  /* line-height: 3em; */
+  margin-top: 10px;
+  text-align: center;
+}
+
+.item-content{
+  flex: 10;
+  margin-left: 10px
+}
+
+.item-content .date{
+  font-size: 0.9em;
+  color: #999;
+  margin-top: 5px;
+}
+
+.item-content .category{
+  font-weight: bold;
+}
+
+.price{
+  flex: 1;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 10px;
+}

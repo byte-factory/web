@@ -55,11 +55,11 @@
             <el-tabs v-model="activeName" @tab-click="handleClick">
               <el-tab-pane label="首页" name="first">
                 <div class="cost-list">
-                  <div class="cost-list-item">
-                    <div class="category_icon">
+                  <div class="cost-list-item" v-for="cost in costs">
+                    <div class="category-icon">
                       <i class="el-icon-food"></i>
                     </div>
-                    <div class="main-content">
+                    <div class="item-content">
                       <div class="date">
                         2020-08-13
                       </div>
@@ -148,6 +148,9 @@
     el: '#app',
     data: function () {
       return { 
+        costs: [
+          1,2,3,4,5,6,7,8,9,10,11,12,13,1,1,1,1,1,1,1,1,1
+        ],
         visible: false,
         form: {
           name: '',
