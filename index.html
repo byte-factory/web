@@ -60,26 +60,26 @@
                     </div>
                     <div class="item-content">
                       <div class="date">
-                        2020-08-13
+                        {{ cost.date }}
                       </div>
                       <div class="category">
-                        食品
+                        {{ cost.category }}
                       </div>
                     </div>
                     <div class="price">
-                      ￥258
+                      ￥{{ cost.price }}
                     </div>
                   </div>
                 </div>
               </el-tab-pane>
               <el-tab-pane label="统计" name="stat">
-                
+                统计报表功能还未完成，将尽快上线
               </el-tab-pane>
               <el-tab-pane label="奖励" name="award">
-                
+                奖励功能还未完成，将尽快上线
               </el-tab-pane>
               <el-tab-pane label="设置" name="setting">
-                
+                设置功能还未完成，将尽快上线
               </el-tab-pane>
               <el-tab-pane>
                 
@@ -92,32 +92,22 @@
             </div>
             <el-form ref="form" :model="form" label-width="60px">
               <el-form-item label="金额">
-                <el-input v-model="form.name"></el-input>
+                <el-input v-model="form.price" placeholder="输入消费金额"></el-input>
               </el-form-item>
               </el-form-item>
               <el-form-item label="日期">
-                <el-date-picker type="date" placeholder="选择日期" v-model="form.date" style="width: 100%;"></el-date-picker>
+                <el-date-picker type="date" placeholder="选择日期" v-model="form.date" style="width: 100%;" value-format="yyyy-MM-dd"></el-date-picker>
               </el-form-item>
               <el-form-item label="类别">
-                <el-radio-group v-model="form.resource">
+                <el-radio-group v-model="form.category">
                   <el-radio label="默认" border size="small"></el-radio>
-                  <el-radio label="服饰" border size="small"></el-radio>
-                  <el-radio label="食品" border size="small"></el-radio>
-                  <el-radio label="住房" border size="small"></el-radio>
-                  <el-radio label="出行" border size="small"></el-radio>
-                  <el-radio label="投资" border size="small"></el-radio>
-                  <el-radio label="旅游" border size="small"></el-radio>
-                  <el-radio label="娱乐" border size="small"></el-radio>
-                  <el-radio label="损失" border size="small"></el-radio>
+                  <el-radio v-for="category in categories" :key="category" :label="category" border size="small"></el-radio>
                 </el-radio-group>
               </el-form-item>
               <el-form-item label="标签">
-                <el-input v-model="form.newtag"></el-input>
+                <el-input v-model="inputTag" @change="addTag" placeholder="添加新的标签"></el-input>
                 <el-checkbox-group v-model="form.tags">
-                  <el-checkbox label="美食/餐厅线上活动" name="tag" border size="mini"></el-checkbox>
-                  <el-checkbox label="地推活动" name="tag" border size="mini"></el-checkbox>
-                  <el-checkbox label="线下主题活动" name="tag" border size="mini"></el-checkbox>
-                  <el-checkbox label="单纯品牌曝光" name="tag" border size="mini"></el-checkbox>
+                  <el-checkbox v-for="tag in tags" :key="tag" :label="tag" :name="tag" border size="mini"></el-checkbox>
                 </el-checkbox-group>
               </el-form-item>
               <el-form-item label="备注">
@@ -144,26 +134,53 @@
 <script>
   new Vue({
     el: '#app',
-    data: function () {
-      return { 
-        costs: [
-          1,2,3,4,5,6,7,8,9,10,11,12,13,1,1,1,1,1,1,1,1,1
-        ],
-        activeName: 'index',
-        visible: false,
-        form: {
-          name: '',
-          date: '',
-          newtag: '',
-          tags: [],
-          resource: '',
-          desc: ''
+    data: {
+      categories: ['服饰','食品','住房','出行','投资','旅游','娱乐','损失'],
+      tags: ['活动','美食','肯德基','小宝','基金'],
+      inputTag: '',
+      costs: [
+        {
+          price: 123,
+          category: '食品',
+          date: '2020-09-12'
+        },{
+          price: 34,
+          category: '出行',
+          date: '2020-09-11'
         }
+      ],
+      activeName: 'index',
+      visible: false,
+      form: {
+        price: '',
+        date: '',
+        tags: [],
+        category: '默认',
+        desc: ''
       }
     },
-    method: {
+    methods: {
+      handleClick(tab, event) {
+        console.log(tab, event);
+      },
+      addTag(tag){
+        this.inputTag = tag;
+        this.tags.push(tag);
+        this.form.tags.push(tag);
+        // 数据库添加标签
+        // 
+      },
       onSubmit() {
-        console.log('submit!');
+        let {price, date, tags, category, desc} = this.form;
+        if(price && date && category){
+          this.costs.unshift({
+            price,
+            category,
+            date
+          })
+        }else{
+          console.log('数据不完整');
+        }
       }
     }
   })

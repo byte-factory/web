@@ -131,7 +131,7 @@ aside .lp-links{
   margin-top: 20px;
 }
 
-.main-aside .el-radio-group{
+.main-aside .el-radio-group, .main-aside .el-checkbox-group{
   display: flex;
   flex-flow: row wrap;
 }
@@ -151,7 +151,7 @@ aside .lp-links{
 }
 
 .el-checkbox__label{
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .el-radio.is-bordered+.el-radio.is-bordered, .el-checkbox.is-bordered+.el-checkbox.is-bordered{
