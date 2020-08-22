@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/byte-factory/web#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "element-ui": "^2.13.2",
     "vue": "^2.6.11",
     "vue-router": "^3.4.1"

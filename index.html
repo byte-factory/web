@@ -5,6 +5,10 @@
   <title>字节加工厂·首页</title>
   <!-- 引入样式 -->
   <link rel="stylesheet" href="./node_modules/element-ui/lib/theme-chalk/index.css">
+  <!-- 引入 fontawesome -->
+  <link href="./node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css" rel="stylesheet">
+  <link href="./node_modules/@fortawesome/fontawesome-free/css/brands.css" rel="stylesheet">
+  <link href="./node_modules/@fortawesome/fontawesome-free/css/solid.css" rel="stylesheet">
   <!-- 自建样式 -->
   <link rel="stylesheet" href="./styles/index.css">
 </head>
@@ -19,16 +23,16 @@
         <el-menu default-active="2" class="el-menu-vertical-demo">
           <!-- <p style="margin: 5px 0; font-size: 0.8em; color: #999;">记录类</p> -->
           <el-menu-item index="2">
-            <i class="el-icon-s-finance" style="font-size: 1.2em;"></i>
-            <span slot="title">记支出</span>
+            <i class="fas fa-yen-sign"></i>
+            <span slot="title"> 记支出</span>
           </el-menu-item>
           <el-menu-item index="3">
-            <i class="el-icon-s-marketing"></i>
-            <span slot="title">记时间</span>
+            <i class="fas fa-stopwatch"></i>
+            <span slot="title"> 记时间</span>
           </el-menu-item>
           <el-menu-item index="4">
-            <i class="el-icon-s-order"></i>
-            <span slot="title">记草稿</span>
+            <i class="fas fa-pen-nib"></i>
+            <span slot="title"> 记草稿</span>
           </el-menu-item>
         </el-menu>
         <div class="lp-login">
@@ -56,7 +60,7 @@
                 <div class="cost-list">
                   <div class="cost-list-item" v-for="cost in costs">
                     <div class="category-icon pay-main-color">
-                      <i class="el-icon-food"></i>
+                      <i :class="cost.category_icon"></i>
                     </div>
                     <div class="item-content">
                       <div class="date">
@@ -135,17 +139,49 @@
   new Vue({
     el: '#app',
     data: {
-      categories: ['服饰','食品','住房','出行','投资','旅游','娱乐','损失'],
-      tags: ['活动','美食','肯德基','小宝','基金'],
+      categories: ['服饰','食品','住房','出行','医疗','价值投资','冲动消费','意外损失'],
+      tags: ['早餐','午餐','外卖','小宝','数码','超市','京东','旅游','北戴河'],
       inputTag: '',
       costs: [
         {
+          price: 34,
+          category: '服饰',
+          category_icon: 'fas fa-shopping-bag',
+          date: '2020-09-11'
+        },{
           price: 123,
           category: '食品',
+          category_icon: 'fas fa-utensils',
           date: '2020-09-12'
         },{
           price: 34,
           category: '出行',
+          category_icon: 'fas fa-plane-departure',
+          date: '2020-09-11'
+        },{
+          price: 34,
+          category: '住房',
+          category_icon: 'fas fa-house-user',
+          date: '2020-09-11'
+        },{
+          price: 45,
+          category: '医疗',
+          category_icon: 'fas fa-briefcase-medical',
+          date: '2020-09-11'
+        },{
+          price: 45,
+          category: '价值投资',
+          category_icon: 'fas fa-book-reader',
+          date: '2020-09-11'
+        },{
+          price: 34,
+          category: '冲动消费',
+          category_icon: 'fas fa-grin-stars',
+          date: '2020-09-11'
+        },{
+          price: 34,
+          category: '意外损失',
+          category_icon: 'fas fa-heart-broken',
           date: '2020-09-11'
         }
       ],
@@ -156,6 +192,7 @@
         date: '',
         tags: [],
         category: '默认',
+        category_icon: '',
         desc: ''
       }
     },
