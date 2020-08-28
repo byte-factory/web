@@ -10,6 +10,7 @@
   <link href="./node_modules/@fortawesome/fontawesome-free/css/brands.css" rel="stylesheet">
   <link href="./node_modules/@fortawesome/fontawesome-free/css/solid.css" rel="stylesheet">
   <!-- 自建样式 -->
+  <link rel="stylesheet" href="./styles/common.css">
   <link rel="stylesheet" href="./styles/index.css">
 </head>
 
@@ -48,22 +49,22 @@
             <div class="app-title">
               记支出 Pay
             </div>
-            <div class="app-desc">
+            <div class="app-desc color-sub">
               记支出，记录你的每一笔消费，走出理财的第一步。
             </div>
             <div class="sum-desc">
-              当月总消费：<b class="pay-main-color">￥3000</b>
-              <span class="pay-main-color float-right"><i class="el-icon-circle-plus"></i> 添加一笔</span>
+              当月总消费：<b class="color-em">￥3000</b>
+              <!-- <span class="color-em float-right"><i class="el-icon-circle-plus"></i> 添加一笔</span> -->
             </div>
             <el-tabs v-model="activeName" @tab-click="handleClick">
               <el-tab-pane label="首页" name="index">
                 <div class="cost-list">
                   <div class="cost-list-item" v-for="cost in costs">
-                    <div class="category-icon pay-main-color">
+                    <div class="category-icon color-em">
                       <i :class="cost.category_icon"></i>
                     </div>
                     <div class="item-content">
-                      <div class="date">
+                      <div class="date color-sub">
                         {{ cost.date }}
                       </div>
                       <div class="category">
@@ -96,7 +97,7 @@
             </div>
             <el-form ref="form" :model="form" label-width="60px">
               <el-form-item label="金额">
-                <el-input v-model="form.price" placeholder="输入消费金额"></el-input>
+                <el-input v-model="form.price" type="number" placeholder="输入消费金额"></el-input>
               </el-form-item>
               </el-form-item>
               <el-form-item label="日期">
@@ -118,7 +119,7 @@
                 <el-input type="textarea" v-model="form.desc"></el-input>
               </el-form-item>
               <el-form-item>
-                <el-button type="primary" @click="onSubmit">立即保存</el-button>
+                <el-button type="primary" @click="onSubmit">立即添加</el-button>
                 <el-button>取消</el-button>
               </el-form-item>
             </el-form>
@@ -197,6 +198,11 @@
       }
     },
     methods: {
+      getCategoryIcon: function(category){
+        let categoryArray = {
+          
+        }
+      },
       handleClick(tab, event) {
         console.log(tab, event);
       },

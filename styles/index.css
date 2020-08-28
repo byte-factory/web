@@ -95,27 +95,10 @@ aside .lp-links{
 .main .main-content .app-desc{
   margin-left: 2px;
   margin-top: 5px;
-  /* font-size: 0.9em; */
-  color: #999;
 }
 
 .main .main-content .sum-desc{
   margin-top: 50px;
-}
-
-.main .main-content .el-tabs{
-  /* margin-top: 50px; */
-}
-
-
-
-.pay-main-color{
-  /* color: #F47B1D; */
-  color: #409EFF;
-}
-
-.float-right{
-  float: right;
 }
 
 
@@ -159,7 +142,6 @@ aside .lp-links{
   margin-left: 0
 }
 
-
 /* list */
 .cost-list{
   max-height: 550px;
@@ -194,12 +176,7 @@ aside .lp-links{
 
 .item-content .date{
   font-size: 0.9em;
-  color: #999;
   margin-top: 5px;
-}
-
-.item-content .category{
-  /* font-weight: bold; */
 }
 
 .price{
